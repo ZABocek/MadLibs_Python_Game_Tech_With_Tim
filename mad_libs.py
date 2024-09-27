@@ -1,4 +1,11 @@
-with open("fairy_tale.txt", "r") as f:
+import os
+
+# Get the directory where the script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+# Build the full path to the fairy_tale.txt file
+filename = os.path.join(script_dir, 'fairy_tale.txt')
+
+with open(filename, "r") as f:
     story = f.read()
 
 words = set()
